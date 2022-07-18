@@ -15,9 +15,9 @@ public class SalesManager {
         return max;
     }
 
-    public int min() {
-        int min = this.max();
-        for (int sale : sales) {
+    public long min() {
+        long min = this.max();
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -25,10 +25,10 @@ public class SalesManager {
         return min;
     }
 
-    public int cutAverage (){
-        int average = 0;
-        int count = 0;
-        for (int sale : sales) {
+    public long cutAverage (){
+        long average = 0;
+        long count = 0;
+        for (long sale : sales) {
             if (sale != this.min() && sale != this.max()) {
                 average += sale;
                 ++count;
